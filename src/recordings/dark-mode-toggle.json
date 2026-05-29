@@ -1,0 +1,19 @@
+[
+  { "ts": 0,    "agent": "system",  "type": "run_started",   "payload": { "request": "Add a dark-mode toggle to the settings page" } },
+  { "ts": 400,  "agent": "planner", "type": "started",        "payload": { "note": "Decomposing the request into tasks" } },
+  { "ts": 1500, "agent": "planner", "type": "task_added",     "payload": { "id": "t1", "title": "Add theme state + context provider" } },
+  { "ts": 1900, "agent": "planner", "type": "task_added",     "payload": { "id": "t2", "title": "Build ThemeToggle component (TDD)" } },
+  { "ts": 2300, "agent": "planner", "type": "task_added",     "payload": { "id": "t3", "title": "Persist preference to localStorage" } },
+  { "ts": 2600, "agent": "planner", "type": "done",           "payload": { "taskCount": 3 } },
+  { "ts": 3000, "agent": "builder", "type": "started",        "payload": { "task": "t1" } },
+  { "ts": 4200, "agent": "builder", "type": "test_written",   "payload": { "file": "src/theme/ThemeProvider.test.tsx", "case": "provides default light theme" } },
+  { "ts": 5200, "agent": "builder", "type": "file_written",   "payload": { "file": "src/theme/ThemeProvider.tsx", "lines": 38 } },
+  { "ts": 6800, "agent": "builder", "type": "test_written",   "payload": { "file": "src/theme/ThemeToggle.test.tsx", "case": "toggles theme on click" } },
+  { "ts": 7900, "agent": "builder", "type": "file_written",   "payload": { "file": "src/theme/ThemeToggle.tsx", "lines": 27 } },
+  { "ts": 9000, "agent": "builder", "type": "done",           "payload": { "filesChanged": 4, "testsAdded": 5 } },
+  { "ts": 9500, "agent": "qa",      "type": "started",        "payload": { "url": "http://localhost:3000/settings" } },
+  { "ts": 11200,"agent": "qa",      "type": "screenshot",     "payload": { "src": "/recordings/dark-mode-toggle/settings-dark.png", "label": "Settings page in dark mode" } },
+  { "ts": 12000,"agent": "qa",      "type": "result",         "payload": { "status": "PASS", "consoleErrors": 0, "networkFailures": 0, "testsPassed": 5, "testsTotal": 5 } },
+  { "ts": 12600,"agent": "system",  "type": "pr_opened",      "payload": { "number": 42, "title": "feat: add dark-mode toggle", "url": "https://github.com/gasoto-dev/ai-harness/pull/42" } },
+  { "ts": 13000,"agent": "system",  "type": "run_complete",   "payload": { "durationMs": 13000, "result": "PASS" } }
+]
